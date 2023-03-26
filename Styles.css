@@ -14,20 +14,76 @@
 
 
 }
+.grid2 {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: [col1-start] 15% [col2-start] 50% [col3-start] 20%;
+    grid-template-rows: [row1-start] 10% [row2-start] 20% [row3-start] 20% [row4-start] 20% [row5-start] 10%;
+    grid-template-areas: 
+    "sidebar ...... ......"
+    "sidebar Infotext1 Image1"
+    "sidebar Infotext2 Image2"
+    "sidebar Infotext3 Image3"
+    "sidebar ...... ......";
+
+}
+.grid3{
+    min-height: 100vh;
+    min-width: 100vw;
+    grid-column-gap: 5%;
+    display: grid;
+    grid-template-columns: [col1-start] 15% [col2-start] 50% [col3-start] 20%;
+    grid-template-rows: [row1-start] 10% [row2-start] 60% [row3-start] 30%;
+    grid-template-areas:
+    "sidebar ...... ......"
+    "sidebar ContactText1 ContactImage1"
+    "sidebar ...... ......";
+}
+.ContactText1{
+    grid-area: ContactText1;
+}
+.ContactImage1{
+    grid-area: ContactImage1;
+}
 .box{
     background-color: #2e3440;
     border-radius: 15px;
     padding: 10px;
+    white-space: pre;
 }
 .imagecontainer{
-    grid-area: Image;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.text1{
+.ProjectsImage1{
+    grid-area: Image1;
+}
+.ProjectsImage2{
+    grid-area: Image2;
+}
+.ProjectsImage3{
+    grid-area: Image3
+}
+.Indextext1{
     grid-area: Infotext;
+}
+.ProjectsText1{
+    grid-area: Infotext1;
+}
+.ProjectsText2{
+    grid-area: Infotext2;
+}
+.ProjectsText3{
+    grid-area: Infotext3;
+}
+.ProjectsImage1{
+    grid-area: Image1;
+}
+.Image1{
+    grid-area: Image;
 }
 p.words{
     width: 100%;
@@ -70,15 +126,7 @@ a {
     color: rgba(#FFF, 0.35);
     display: block;
   }
-#Contact{
 
-}
-#Home{
-
-}
-#Projects{
-
-}
 @media all and (max-width: 800px){
     .grid {
         min-height: 100vh;
