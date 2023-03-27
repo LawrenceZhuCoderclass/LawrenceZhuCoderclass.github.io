@@ -51,12 +51,14 @@
     background-color: #2e3440;
     border-radius: 15px;
     padding: 10px;
-    white-space: pre;
+    white-space: pre-line;
+    font-size: 150%;
 }
 .imagecontainer{
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 100%;
 }
 .ProjectsImage1{
     grid-area: Image1;
@@ -95,6 +97,7 @@ p.words{
 }
 body {
     min-height: 100vh;
+    min-width: 100vw;
     margin: 0;
     background-color: #242933;
     font-family: 'Roboto Mono';
@@ -127,19 +130,44 @@ a {
     display: block;
   }
 
-@media all and (max-width: 800px){
+@media all and (min-width: 1200px) and (max-width: 1500px) {
+    .nav{
+        position: relative;
+        margin: 0;
+        text-align: left;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: bold;
+    }
+}
+@media all and (max-width: 1200px){
     .grid {
         min-height: 100vh;
         min-width: 100vw;
         display: grid;
-        grid-row-gap: 5%;
+        grid-row-gap: 10px;
         grid-template-columns: [col1-start] 100%;
-        grid-template-rows: [row1-start] 10% [row2-start] 60% [row3-start] 25%;
+        grid-template-rows: [row1-start] 10vh [row2-start] 60% [row3-start] 25%;
         grid-template-areas:
         "sidebar"
         "Infotext"
-        "Image";
-    
+        "Image";    
+    }
+    .grid2 {
+        min-height: 100vh;
+        min-width: 100vw;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-template-columns: [col1-start] 100%;
+        grid-template-rows: [row1-start] 10vh [row2-start] 40% [row3-start] 11% [row4-start] 11% [row5-start] 11% [row6-start] 11% [row7-start] 11%;
+        grid-template-areas: 
+        "sidebar"
+        "Infotext1"
+        "Image1"
+        "Infotext2"
+        "Image2"
+        "Infotext3"
+        "Image3";
     
     }
     ul li{
@@ -151,10 +179,9 @@ a {
         text-decoration: none;
         letter-spacing: 0.1em;
         display: block;
+        font-size: 83%;
       }
       .nav{
         text-align: center;
-   
-
     }
 }
