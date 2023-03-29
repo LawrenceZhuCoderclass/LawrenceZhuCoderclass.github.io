@@ -135,7 +135,7 @@ body {
 .nav{
     position: relative;
     margin: 0 5%;
-    text-align: right;
+    text-align: left;
     top: 50%;
     transform: translateY(-50%);
     font-weight: bold;
@@ -172,7 +172,7 @@ li{
         display: grid;
         grid-row-gap: 5%;
         grid-template-columns: [col1-start] 100%;
-        grid-template-rows: [row1-start] 10vh [row2-start] 30% [row3-start] 45%;
+        grid-template-rows: [row1-start] 10vh [row2-start] 40% [row3-start] 45%;
         grid-template-areas:
         "sidebar"
         "Infotext"
@@ -184,7 +184,7 @@ li{
         display: grid;
         grid-row-gap: 10px;
         grid-template-columns: [col1-start] 100%;
-        grid-template-rows: [row1-start] 10vh [row2-start] 11% [row3-start] 11% [row4-start] 11% [row5-start] 11% [row6-start] 11% [row7-start] 11% [row8-start] 11% [row9-start] 11% [row10-start] 11% [row11-start] 11%; 
+        grid-template-rows: [row1-start] 10vh [row2-start] 15% [row3-start] 11% [row4-start] 15% [row5-start] 11% [row6-start] 15% [row7-start] 11% [row8-start] 15% [row9-start] 11% [row10-start] 15% [row11-start] 11%; 
         grid-template-areas: 
         "sidebar"
         "Infotext1"
@@ -205,11 +205,14 @@ li{
         display: grid;
         grid-row-gap: 5%;
         grid-template-columns: [col1-start] 100%;
-        grid-template-rows: [row1-start] 10vh [row2-start] 40% [row3-start] 35%;
+        grid-template-rows: [row1-start] 10vh [row2-start] 30% [row3-start] 35%;
         grid-template-areas:
         "sidebar"
         "ContactText1"
         "ContactImage1";    
+    }
+    .box.ContactText1{
+        font-size: 2.5vw;
     }
 
     ul li{
@@ -221,7 +224,7 @@ li{
         text-decoration: none;
         letter-spacing: 0.1em;
         display: block;
-        font-size: 83%;
+        font-size: 3vw;
         color: #ff9552;
       }
     .nav{
@@ -232,7 +235,7 @@ li{
         border-radius: 15px;
         padding-left: 2%;
         white-space: pre-line;
-        font-size: 2.5vw;
+        font-size: 1.8vw;
     }
 
 }
