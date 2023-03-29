@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
-
-.grid {
+/*--------------------------------Grids for normal screen--------------------------------*/
+.grids{
     min-height: 100vh;
     min-width: 100vw;
     display: grid;
+}
+.grid {
     grid-column-gap: 5%;
     grid-template-columns: [col1-start] 15% [col2-start] 50% [col3-start] 20%;
     grid-template-rows: [row1-start] 10% [row2-start] 60% [row3-start] 30%;
@@ -11,8 +13,6 @@
     "sidebar ...... ......"
     "sidebar Infotext Image"
     "sidebar ...... ......";
-
-
 }
 .grid2 {
     min-height: 100vh;
@@ -32,10 +32,7 @@
 
 }
 .grid3{
-    min-height: 100vh;
-    min-width: 100vw;
     grid-column-gap: 5%;
-    display: grid;
     grid-template-columns: [col1-start] 15% [col2-start] 50% [col3-start] 20%;
     grid-template-rows: [row1-start] 30% [row2-start] 40% [row3-start] 30%;
     grid-template-areas:
@@ -43,50 +40,14 @@
     "sidebar ContactText1 ContactImage1"
     "sidebar ...... ......";
 }
-.ContactText1{
-    grid-area: ContactText1;
-}
-.ContactImage1{
-    grid-area: ContactImage1;
-}
-.box{
-    background-color: #232533;
-    border-radius: 15px;
-    padding: 10px;
-    white-space: pre-line;
-    font-size: 1.1vw;
-
-}
-.imagecontainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.EmailLink{
-    color: #ffd751;
-}
-.Link{
-    color: #36c1f6;
-}
-.ProjectsImage1{
-    grid-area: Image1;
-}
-.ProjectsImage2{
-    grid-area: Image2;
-}
-.ProjectsImage3{
-    grid-area: Image3;
-}
-.ProjectsImage4{
-    grid-area: Image4;
-}
-.ProjectsImage5{
-    grid-area: Image5;
-}
+/*--------------------------------All divs related to the home page--------------------------------*/
 .Indextext1{
     grid-area: Infotext;
 }
+.Image1{
+    grid-area: Image;
+}
+/*--------------------------------All divs related to the Projects page--------------------------------*/
 .ProjectsText1{
     grid-area: Infotext1;
 }
@@ -105,20 +66,90 @@
 .ProjectsImage1{
     grid-area: Image1;
 }
-.Image1{
-    grid-area: Image;
+.ProjectsImage1{
+    grid-area: Image1;
 }
-p.words{
-    width: 100%;
-    white-space: normal;
+.ProjectsImage2{
+    grid-area: Image2;
+}
+.ProjectsImage3{
+    grid-area: Image3;
+}
+.ProjectsImage4{
+    grid-area: Image4;
+}
+.ProjectsImage5{
+    grid-area: Image5;
+}
+/*--------------------------------All divs related to the Contact page--------------------------------*/
+.ContactText1{
+    grid-area: ContactText1;
+}
+.ContactImage1{
+    grid-area: ContactImage1;
+}
+/*--------------------------------Everything related to the menu bar--------------------------------*/
+.nav{
+    position: relative;
+    margin: 0 5%;
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+
+}
+
+li{
+    
+    position:relative;
+    margin: 3.2em 0;
+    list-style-type: none;
+}
+
+.NavLinks {
+    line-height: 4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.4em;
+    color: #ff9552;
+    display: block; 
+}
+.sidebar{
+    grid-area: sidebar;
+    border-right: 3px solid #232533;
+}
+
+/*--------------------------------Everything related to the text boxes--------------------------------*/
+.box{
+    background-color: #232533;
+    border-radius: 15px;
+    padding: 10px;
+    white-space: pre-line;
+    font-size: 1.1vw;
+
+}
+/*--------------------------------Everything related to the images--------------------------------*/
+.imagecontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .profile{
     max-width: 100%;
     max-height: 100%;
     width: auto;
     height: auto;
-
 }
+/*--------------------------------Everything related to the link in the pages--------------------------------*/
+.EmailLink{
+    color: #ffd751;
+}
+.Link{
+    color: #36c1f6;
+}
+
+
+/*--------------------------------Everything related to the text--------------------------------*/
 body {
     min-height: 100vh;
     min-width: 100vw;
@@ -128,48 +159,11 @@ body {
     color: white;
     overflow-x: hidden;
 }
-.sidebar{
-    grid-area: sidebar;
-    background:#4C566A;
-}
-.nav{
-    position: relative;
-    margin: 0 5%;
-    text-align: left;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-}
-li{
-    
-    position:relative;
-    margin: 3.2em 0;
-    list-style-type: none;
-}
-.NavLinks {
-    line-height: 4em;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.4em;
-    color: #ff9552;
-    display: block;
-  }
 
-@media all and (min-width: 1200px) and (max-width: 1500px) {
-    .nav{
-        position: relative;
-        margin: 0;
-        text-align: left;
-        top: 50%;
-        transform: translateY(-50%);
-        font-weight: bold;
-    }
-}
+
+/*--------------------------------This is active when the window reaches a certain size, rearranging the layout and changing text size--------------------------------*/
 @media all and (max-width: 1200px){
     .grid {
-        min-height: 100vh;
-        min-width: 100vw;
-        display: grid;
         grid-row-gap: 5%;
         grid-template-columns: [col1-start] 100%;
         grid-template-rows: [row1-start] 10vh [row2-start] 50% [row3-start] 45%;
@@ -179,9 +173,6 @@ li{
         "Image";    
     }
     .grid2 {
-        min-height: 100vh;
-        min-width: 100vw;
-        display: grid;
         grid-row-gap: 10px;
         grid-template-columns: [col1-start] 100%;
         grid-template-rows: [row1-start] 10vh [row2-start] 15% [row3-start] 11% [row4-start] 15% [row5-start] 11% [row6-start] 15% [row7-start] 11% [row8-start] 15% [row9-start] 11% [row10-start] 15% [row11-start] 11%; 
@@ -200,9 +191,6 @@ li{
     
     }
     .grid3 {
-        min-height: 100vh;
-        min-width: 100vw;
-        display: grid;
         grid-row-gap: 5%;
         grid-template-columns: [col1-start] 100%;
         grid-template-rows: [row1-start] 10vh [row2-start] 35% [row3-start] 30%;
