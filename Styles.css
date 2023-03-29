@@ -172,7 +172,7 @@ li{
         display: grid;
         grid-row-gap: 5%;
         grid-template-columns: [col1-start] 100%;
-        grid-template-rows: [row1-start] 10vh [row2-start] 40% [row3-start] 45%;
+        grid-template-rows: [row1-start] 10vh [row2-start] 50% [row3-start] 45%;
         grid-template-areas:
         "sidebar"
         "Infotext"
@@ -205,7 +205,7 @@ li{
         display: grid;
         grid-row-gap: 5%;
         grid-template-columns: [col1-start] 100%;
-        grid-template-rows: [row1-start] 10vh [row2-start] 30% [row3-start] 35%;
+        grid-template-rows: [row1-start] 10vh [row2-start] 35% [row3-start] 30%;
         grid-template-areas:
         "sidebar"
         "ContactText1"
